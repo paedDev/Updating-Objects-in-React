@@ -1,0 +1,36 @@
+
+.container{
+    background-color: rgb(247, 242, 242);
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px black;
+}
+
+.title{
+    font-size: 2rem;
+    text-align: center;
+}
+
+input[type=number], input[type=text], .select{
+    padding: 10px;
+    border: none;
+    margin:5px;
+    outline: none;
+    text-align: start;
+    box-shadow: 0px 0px 5px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+}
+.label{
+    margin-left: 30px;
+}
+.select{
+    display: block;
+}

@@ -19,7 +19,7 @@ function Object () {
     }
 
     const handleModelChange = (e) =>{
-        setCar(c ({...car,model: e.target.value}))
+        setCar(c =>({...car,model: e.target.value}))
     }
     const handleCarModelChange = (e) =>{
         setCarModel(c => e.target.value)
@@ -27,21 +27,22 @@ function Object () {
 
     return (
         <>
-        <div>
-            <p>Your favorite car is {car.year} {car.make} {car.model}</p>
+        <div className={styles.container}>
+            <p className={styles.title}>Your favorite car is <br></br>{car.year} {car.make} {car.model}</p>
 
             <input type="number" value = {car.year} onChange={handleYearChange}/>
             <input type="text" value = {car.make} onChange={handleMakeChange}/>
             <input type="text" value = {car.model} onChange={handleModelChange}/>
        
             <div>
-            <select value={carModel} onChange={handleCarModelChange}>
+            <label className={styles.label}>Select a car</label>
+            <select value={carModel} onChange={handleCarModelChange} className={styles.select}>
                 <option value="">Select a model</option>
                 <option value="Pagani">Pagani</option>
                 <option value="Lambo">Lambo</option>
                 <option value="Kuliglig">Kuliglig</option>
             </select>
-            <label>Select a car</label>
+    
            
             <p>You pick: {carModel}</p>
             </div>
